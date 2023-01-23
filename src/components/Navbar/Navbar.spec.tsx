@@ -1,5 +1,10 @@
+import { render, screen } from '@testing-library/react';
+import { Navbar } from './Navbar';
+
 describe('Navbar', () => {
   it('Should be able show navbar in the document', () => {
-    expect(1 + 1).toBe(2);
+    render(<Navbar />);
+
+    expect(screen.getByText('DashL.')).toBeInTheDocument();
   });
 });
