@@ -1,10 +1,11 @@
 import React from 'react';
 import { Logo } from '../Logo/Logo';
+import { StyledNavbar } from './styles';
 
 export const Navbar = () => {
   return (
-    <div>
+    <StyledNavbar>
       <Logo />
-    </div>
+    </StyledNavbar>
   );
 };

@@ -8,6 +8,8 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    font-family: 'Nunito'
+    font-family: 'Nunito';
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
   }
 `;
