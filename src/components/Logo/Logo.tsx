@@ -1,10 +1,14 @@
 import React from 'react';
 import { StyledLogo } from './styles';
 
-export const Logo = () => {
+export type LogoProps = {
+  minified?: boolean;
+};
+
+export const Logo = (props: LogoProps) => {
   return (
-    <StyledLogo>
-      DashL<strong>.</strong>
+    <StyledLogo className="logo" {...props}>
+      {props.minified ? 'D' : 'DashL<strong>.</strong>'}
     </StyledLogo>
   );
 };
