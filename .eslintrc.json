@@ -12,7 +12,9 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "tsx": true,
+            "ts": true
         },
         "ecmaVersion": 12,
         "sourceType": "module"
@@ -23,6 +25,7 @@
         "prettier"
     ],
     "rules": {
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "import/export": "off"
     }
 }

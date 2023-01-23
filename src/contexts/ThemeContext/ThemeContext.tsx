@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { dark } from '../../styles/themes/dark';
 import { light } from '../../styles/themes/light';
 
@@ -21,5 +21,9 @@ export const ThemeContextProvider = ({ children }: ThemeContextProviderProps) =>
     setTheme((oldTheme) => (oldTheme === dark ? light : dark));
   };
 
-  return <ContextTheme.Provider value={{ changeTheme, theme }}>{children}</ContextTheme.Provider>;
+  return (
+    <ContextTheme.Provider value={{ changeTheme, theme }}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </ContextTheme.Provider>
+  );
 };
