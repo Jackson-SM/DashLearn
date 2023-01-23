@@ -1,7 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Navbar } from '../../components/Navbar/Navbar';
+import { Sidebar } from '../../components/Sidebar/Sidebar';
+import { StyledContent, StyledDashboard, StyledMain } from './styles';
 
 export const Dashboard = () => {
   return (
-    <div><h1>Dashboard</h1></div>
-  )
-}
+    <StyledDashboard>
+      <Navbar />
+      <StyledContent>
+        <Sidebar />
+        <StyledMain>
+          <Outlet />
+        </StyledMain>
+      </StyledContent>
+    </StyledDashboard>
+  );
+};
