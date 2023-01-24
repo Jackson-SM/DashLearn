@@ -8,7 +8,13 @@ export type LogoProps = {
 export const Logo = (props: LogoProps) => {
   return (
     <StyledLogo className="logo" {...props}>
-      {props.minified ? 'D' : 'DashL<strong>.</strong>'}
+      {props.minified ? (
+        <>D</>
+      ) : (
+        <>
+          DashL<strong>.</strong>
+        </>
+      )}
     </StyledLogo>
   );
 };

@@ -1,10 +1,9 @@
 import { render, RenderOptions } from '@testing-library/react';
 import React, { ReactElement } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { light } from '../styles/themes/light';
+import { ThemeContextProvider } from '../contexts/ThemeContext/ThemeContext';
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return <ThemeProvider theme={light}>{children}</ThemeProvider>;
+  return <ThemeContextProvider>{children}</ThemeContextProvider>;
 };
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapperr'>) =>

@@ -6,7 +6,7 @@ import { StyledNavbar } from './styles';
 export const Navbar = () => {
   return (
     <StyledNavbar>
-      <Logo minified />
+      <Logo />
       <Themes />
     </StyledNavbar>
   );

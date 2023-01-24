@@ -23,6 +23,4 @@ export const StyledLogo = styled.h1<LogoProps>`
 
     text-decoration-color: ${(props) => props.theme.colors.primary};
   }
-
-  ${(props) => (props.minified ? `border: 1px solid red;` : `border: 1px solid green;`)}
 `;

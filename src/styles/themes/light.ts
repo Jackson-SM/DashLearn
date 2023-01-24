@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components';
 export const light: DefaultTheme = {
   title: 'light',
   colors: {
-    primary: '#ea00ff',
+    primary: '#0066FF',
     secundary: '#8E44EF',
 
     background: '#e7e7e7',
