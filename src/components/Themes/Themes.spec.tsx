@@ -15,8 +15,6 @@ describe('Themes', () => {
 
     await userEvent.click(themeButton);
 
-    screen.debug();
-
     expect(screen.getByText('Light')).toBeInTheDocument();
     expect(screen.queryByText('Dark')).not.toBeInTheDocument();
   });

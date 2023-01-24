@@ -5,13 +5,23 @@ import { LogoProps } from './Logo';
 export const StyledLogo = styled.h1<LogoProps>`
   font-family: 'MuseoModerno';
   font-size: 35px;
-  background: linear-gradient(
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${(props) => props.minified && `border-radius: 50%; border: 2px solid white;padding: 5px;width: 50px;height: 50px;`}
+
+  ${(props) =>
+    props.simpleColor
+      ? `color: white;`
+      : `background: linear-gradient(
     to right,
-    ${(props) => props.theme.colors.primary},
-    ${(props) => lighten(0.1, props.theme.colors.secundary)}
+    ${props.theme.colors.primary},
+    ${lighten(0.1, props.theme.colors.secundary)}
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;`}
 
   strong {
     background: linear-gradient(

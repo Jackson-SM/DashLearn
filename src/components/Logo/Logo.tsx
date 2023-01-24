@@ -3,6 +3,7 @@ import { StyledLogo } from './styles';
 
 export type LogoProps = {
   minified?: boolean;
+  simpleColor?: boolean;
 };
 
 export const Logo = (props: LogoProps) => {

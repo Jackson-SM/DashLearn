@@ -4,10 +4,10 @@ export const dark: DefaultTheme = {
   title: 'dark',
   colors: {
     primary: '#0066FF',
-    secundary: '#8E44EF',
+    secundary: '#7A55FF',
 
-    background: '#0D0813',
-    backgroundLight: '#221D26',
+    background: '#08080C',
+    backgroundLight: '#101018',
     text: '#e7e7e7',
     textLight: '#BFBFBF',
   },
