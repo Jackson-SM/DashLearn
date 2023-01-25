@@ -8,9 +8,4 @@ describe('Logo', () => {
 
     expect(screen.getByText('DashL')).toBeInTheDocument();
   });
-  it('Should started just with "D"', () => {
-    render(<Logo minified />);
-
-    expect(screen.getByText('D')).toBeInTheDocument();
-  });
 });

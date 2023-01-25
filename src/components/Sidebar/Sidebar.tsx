@@ -1,32 +1,27 @@
 import React from 'react';
 import { Logo } from '../Logo/Logo';
-import { LinkSidebar, StyledContentSidebar, StyledSidebar, StyledTopSidebar } from './styles';
-import { TimerIcon } from '@radix-ui/react-icons';
+import { StyledContentSidebar, StyledSidebar, StyledTopSidebar } from './styles';
+import { BellIcon, DashboardIcon, GearIcon, StarIcon } from '@radix-ui/react-icons';
+import { LinkSidebar } from './LinkSidebar';
 
 export const Sidebar = () => {
   return (
     <StyledSidebar>
       <StyledTopSidebar>
-        <Logo simpleColor minified />
+        <Logo simpleColor />
       </StyledTopSidebar>
       <StyledContentSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Dashboard
+        <LinkSidebar to="/dashboard">
+          <DashboardIcon /> Dashboard
         </LinkSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Timeout
+        <LinkSidebar to="notes">
+          <StarIcon /> Favourites
         </LinkSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Clock
+        <LinkSidebar to="settings">
+          <BellIcon /> Notifications
         </LinkSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Legend
-        </LinkSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Favourites
-        </LinkSidebar>
-        <LinkSidebar to="dashboard">
-          <TimerIcon /> Timer
+        <LinkSidebar to="settings">
+          <GearIcon /> Settings
         </LinkSidebar>
       </StyledContentSidebar>
     </StyledSidebar>

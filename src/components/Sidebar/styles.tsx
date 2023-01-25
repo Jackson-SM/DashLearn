@@ -6,22 +6,24 @@ import styled from 'styled-components';
 export const StyledSidebar = styled.nav`
   width: 250px;
   height: calc((100vh - 60px) - 20px);
-  background: ${(props) => props.theme.colors.secundary};
+  background: ${(props) => props.theme.colors.backgroundLight};
 
   border-radius: 5px;
 
   padding: 10px;
   margin: 10px;
 
+  gap: 10px;
+
   display: flex;
   flex-direction: column;
-  gap: 10px;
 `;
 
 export const StyledTopSidebar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 `;
 
 // Links
@@ -33,30 +35,35 @@ export const StyledContentSidebar = styled.div`
   gap: 10px;
 `;
 export const StyledGroupSidebar = styled.div``;
-export const LinkSidebar = styled(Link)`
+export const StyledLinkSidebar = styled(Link)`
   text-decoration: none;
 
-  color: white;
+  color: ${(props) => props.theme.colors.textLight};
 
   width: 100%;
-  padding: 10px;
+  padding: 12px;
 
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  font-size: 17px;
+  font-size: 15px;
 
   border-radius: 5px;
 
   transition: all ease 130ms;
 
+  padding-left: 30px;
+
+  & span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
   & svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   &:hover {
-    background: white;
-    color: ${(props) => props.theme.colors.secundary};
+    background: ${(props) => props.theme.colors.backgroundLight2};
+    color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
   }
 `;

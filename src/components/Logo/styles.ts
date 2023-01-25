@@ -10,11 +10,9 @@ export const StyledLogo = styled.h1<LogoProps>`
   align-items: center;
   justify-content: center;
 
-  ${(props) => props.minified && `border-radius: 50%; border: 2px solid white;padding: 5px;width: 50px;height: 50px;`}
-
   ${(props) =>
     props.simpleColor
-      ? `color: white;`
+      ? `color: ${props.theme.colors.text};`
       : `background: linear-gradient(
     to right,
     ${props.theme.colors.primary},
