@@ -11,17 +11,17 @@ export const Sidebar = () => {
         <Logo simpleColor />
       </StyledTopSidebar>
       <StyledContentSidebar>
-        <LinkSidebar to="/dashboard">
-          <DashboardIcon /> Dashboard
+        <LinkSidebar to="/dashboard" icon={<DashboardIcon />}>
+          Dashboard
         </LinkSidebar>
-        <LinkSidebar to="notes">
-          <StarIcon /> Favourites
+        <LinkSidebar to="notes" icon={<StarIcon />}>
+          Favourites
         </LinkSidebar>
-        <LinkSidebar to="settings">
-          <BellIcon /> Notifications
+        <LinkSidebar to="settings" icon={<BellIcon />}>
+          Notifications
         </LinkSidebar>
-        <LinkSidebar to="settings">
-          <GearIcon /> Settings
+        <LinkSidebar to="settings" icon={<GearIcon />}>
+          Settings
         </LinkSidebar>
       </StyledContentSidebar>
     </StyledSidebar>

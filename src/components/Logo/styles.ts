@@ -1,6 +1,7 @@
 import { lighten } from 'polished';
 import styled from 'styled-components';
 import { LogoProps } from './Logo';
+import styledConfig from '../../config/styled-components-config';
 
 export const StyledLogo = styled.h1<LogoProps>`
   font-family: 'MuseoModerno';
