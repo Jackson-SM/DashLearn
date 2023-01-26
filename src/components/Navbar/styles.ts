@@ -8,6 +8,8 @@ export const StyledNavbar = styled.nav`
   align-items: center;
   justify-content: space-between;
 
+  grid-area: navbar;
+
   & .logo {
     margin: 0 auto;
   }

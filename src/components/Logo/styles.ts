@@ -13,7 +13,7 @@ export const StyledLogo = styled.h1<LogoProps>`
 
   ${(props) =>
     props.simpleColor
-      ? `color: ${props.theme.colors.text};`
+      ? `color: ${props.theme.colors.textLight};`
       : `background: linear-gradient(
     to right,
     ${props.theme.colors.primary},
@@ -31,5 +31,17 @@ export const StyledLogo = styled.h1<LogoProps>`
     -webkit-background-clip: text;
 
     text-decoration-color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: ${styledConfig.medias.mobile}px) {
+    border-radius: 50%;
+
+    border: 2px solid ${(props) => props.theme.colors.textLight};
+    width: 50px;
+    height: 50px;
+    -webkit-background-clip: content-box;
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: ${({ theme }) => theme.colors.textLight};
   }
 `;

@@ -6,23 +6,23 @@ import styledConfig from '../../config/styled-components-config';
 
 export const StyledSidebar = styled.nav`
   width: 250px;
-  height: calc((100vh - 60px) - 20px);
+  height: 100vh;
   background: ${(props) => props.theme.colors.backgroundLight};
 
   border-radius: 5px;
-
-  padding: 10px;
-  margin: 10px;
 
   gap: 10px;
 
   display: flex;
   flex-direction: column;
 
+  grid-area: sidebar;
+
   @media (max-width: ${styledConfig.medias.mobile}px) {
     width: 80px;
     display: flex;
     align-items: center;
+    padding: 5px;
   }
 `;
 
@@ -31,6 +31,8 @@ export const StyledTopSidebar = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+
+  background: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
 `;
 
 // Links
@@ -42,7 +44,7 @@ export const StyledContentSidebar = styled.div`
   gap: 10px;
 `;
 export const StyledGroupSidebar = styled.div``;
-export const StyledLinkSidebar = styled(Link)`
+export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
   text-decoration: none;
 
   color: ${(props) => props.theme.colors.textLight};
@@ -50,17 +52,37 @@ export const StyledLinkSidebar = styled(Link)`
   display: flex;
   align-items: center;
 
+  position: relative;
+
   width: 100%;
   padding: 12px;
   font-size: 15px;
   border-radius: 5px;
+  gap: 40px;
 
-  transition: all ease 130ms;
+  transition: background ease 130ms;
+
+  &::before {
+    content: '';
+
+    transition: all ease 400ms;
+
+    pointer-events: none;
+
+    position: absolute;
+
+    background: ${(props) =>
+      props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary};
+
+    opacity: 0;
+    width: 4px;
+    border-radius: 40px;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
 
   & span {
-    flex: none;
-    justify-self: center;
-    align-self: center;
   }
 
   & svg {
@@ -73,6 +95,16 @@ export const StyledLinkSidebar = styled(Link)`
     background: ${(props) => props.theme.colors.backgroundLight2};
     color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
   }
+
+  ${(props) =>
+    props.active &&
+    `color: ${props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary};
+  background: ${props.theme.colors.backgroundLight2};
+
+   &::before {
+    opacity: 1;
+  }
+    `}
 
   @media (max-width: ${styledConfig.medias.mobile}px) {
     position: relative;

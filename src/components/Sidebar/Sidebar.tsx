@@ -1,8 +1,9 @@
 import React from 'react';
 import { Logo } from '../Logo/Logo';
-import { StyledContentSidebar, StyledSidebar, StyledTopSidebar } from './styles';
+import { StyledContentSidebar, StyledGroupSidebar, StyledSidebar, StyledTopSidebar } from './styles';
 import { BellIcon, DashboardIcon, GearIcon, StarIcon } from '@radix-ui/react-icons';
 import { LinkSidebar } from './LinkSidebar';
+import { Themes } from '../Themes/Themes';
 
 export const Sidebar = () => {
   return (
@@ -14,7 +15,7 @@ export const Sidebar = () => {
         <LinkSidebar to="/dashboard" icon={<DashboardIcon />}>
           Dashboard
         </LinkSidebar>
-        <LinkSidebar to="notes" icon={<StarIcon />}>
+        <LinkSidebar to="favourites" icon={<StarIcon />}>
           Favourites
         </LinkSidebar>
         <LinkSidebar to="settings" icon={<BellIcon />}>
@@ -23,6 +24,9 @@ export const Sidebar = () => {
         <LinkSidebar to="settings" icon={<GearIcon />}>
           Settings
         </LinkSidebar>
+        <StyledGroupSidebar>
+          <Themes />
+        </StyledGroupSidebar>
       </StyledContentSidebar>
     </StyledSidebar>
   );
