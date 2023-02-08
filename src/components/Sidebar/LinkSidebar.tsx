@@ -11,11 +11,7 @@ export const LinkSidebar = ({ children, icon, to, ...props }: LinkSidebarProps) 
   const location = useLocation();
 
   return (
-    <StyledLinkSidebar
-      to={to}
-      active={location.pathname === `/dashboard/${to}` || location.pathname === to ? `true` : undefined}
-      {...props}
-    >
+    <StyledLinkSidebar to={to} active={location.pathname === `/${to}` || location.pathname === to ? `true` : undefined} {...props}>
       {icon}
       <span>{children}</span>
     </StyledLinkSidebar>

@@ -6,9 +6,9 @@ export const dark: DefaultTheme = {
     primary: '#0066FF',
     secundary: '#ab62ff',
 
-    background: '#08080C',
-    backgroundLight: '#101018',
-    backgroundLight2: '#171724',
+    background: '#0F0F0F',
+    backgroundLight: '#1C1C1C',
+    backgroundLight2: '#262626',
 
     text: '#e7e7e7',
     textLight: '#BFBFBF',

@@ -9,7 +9,7 @@ export const light: DefaultTheme = {
     background: '#dbdbdb',
     backgroundLight: '#eaeaea',
     backgroundLight2: '#dedede',
-    text: '#0D0813',
-    textLight: '#292938',
+    text: '#0F0F0F',
+    textLight: '#292929',
   },
 };

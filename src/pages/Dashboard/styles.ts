@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledDashboard = styled.div`
-  display: grid;
-  grid-template-areas:
-    'sidebar navbar navbar navbar'
-    'sidebar main main main';
+  display: flex;
 `;
+
+export const ContainerDashboard = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
 export const StyledMain = styled.main`
   grid-area: main;
 `;

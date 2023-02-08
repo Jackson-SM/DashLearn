@@ -7,7 +7,7 @@ import { Favourites } from '../pages/Favourites';
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="dashboard" element={<Dashboard />}>
+      <Route path="/" element={<Dashboard />}>
         <Route path="favourites" element={<Favourites />} />
       </Route>
     </Routes>

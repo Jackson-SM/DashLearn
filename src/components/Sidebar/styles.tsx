@@ -5,11 +5,14 @@ import styledConfig from '../../config/styled-components-config';
 // Body Sidebar
 
 export const StyledSidebar = styled.nav`
-  width: 250px;
+  width: 300px;
   height: 100vh;
   background: ${(props) => props.theme.colors.backgroundLight};
 
   border-radius: 5px;
+
+  padding: 5px;
+  padding-top: 60px;
 
   gap: 10px;
 
@@ -28,11 +31,14 @@ export const StyledSidebar = styled.nav`
 
 export const StyledTopSidebar = styled.div`
   display: flex;
+  flex-direction: column;
+`;
+export const StyledProfileSidebar = styled.div`
+  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
 
-  background: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
+  width: 100%;
+  padding: 10px;
 `;
 
 // Links
@@ -44,7 +50,7 @@ export const StyledContentSidebar = styled.div`
   gap: 10px;
 `;
 export const StyledGroupSidebar = styled.div``;
-export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
+export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
   text-decoration: none;
 
   color: ${(props) => props.theme.colors.textLight};
@@ -55,7 +61,7 @@ export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
   position: relative;
 
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   font-size: 15px;
   border-radius: 5px;
   gap: 40px;
@@ -71,15 +77,14 @@ export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
 
     position: absolute;
 
-    background: ${(props) =>
-      props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary};
+    background: white;
 
     opacity: 0;
     width: 4px;
     border-radius: 40px;
-    height: 100%;
-    top: 0;
-    right: 0;
+    height: calc(100% - 10px);
+    top: 5px;
+    right: 5px;
   }
 
   & span {
@@ -92,19 +97,19 @@ export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
   }
 
   &:hover {
-    background: ${(props) => props.theme.colors.backgroundLight2};
-    color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
+    background: ${(props) => props.theme.colors.primary};
+    color: white;
   }
 
   ${(props) =>
     props.active &&
-    `color: ${props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary};
-  background: ${props.theme.colors.backgroundLight2};
+    `color: white;
+  background: ${props.theme.colors.primary};
 
    &::before {
     opacity: 1;
   }
-    `}
+  `}
 
   @media (max-width: ${styledConfig.medias.mobile}px) {
     position: relative;
@@ -120,8 +125,7 @@ export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
 
     & span {
       position: absolute;
-      background: ${(props) =>
-        props.theme.title === 'dark' ? props.theme.colors.backgroundLight2 : props.theme.colors.backgroundLight};
+      background: ${({ theme }) => (theme.title === 'dark' ? theme.colors.backgroundLight2 : theme.colors.backgroundLight)};
       padding: 10px;
       color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
 
@@ -148,8 +152,7 @@ export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
       border-bottom: 8px solid transparent;
 
       border-right: 8px solid
-        ${(props) =>
-          props.theme.title === 'dark' ? props.theme.colors.backgroundLight2 : props.theme.colors.backgroundLight};
+        ${(props) => (props.theme.title === 'dark' ? props.theme.colors.backgroundLight2 : props.theme.colors.backgroundLight)};
 
       top: calc(50% - 10px);
       left: -8px;

@@ -1,18 +1,22 @@
 import React from 'react';
-import { Logo } from '../Logo/Logo';
-import { StyledContentSidebar, StyledGroupSidebar, StyledSidebar, StyledTopSidebar } from './styles';
+import { StyledContentSidebar, StyledGroupSidebar, StyledProfileSidebar, StyledSidebar, StyledTopSidebar } from './styles';
 import { BellIcon, DashboardIcon, GearIcon, StarIcon } from '@radix-ui/react-icons';
 import { LinkSidebar } from './LinkSidebar';
 import { Themes } from '../Themes/Themes';
+import { Profile } from '../Profile';
+import { Search } from '../Search';
 
 export const Sidebar = () => {
   return (
     <StyledSidebar>
       <StyledTopSidebar>
-        <Logo simpleColor />
+        <StyledProfileSidebar>
+          <Profile />
+        </StyledProfileSidebar>
+        <Search />
       </StyledTopSidebar>
       <StyledContentSidebar>
-        <LinkSidebar to="/dashboard" icon={<DashboardIcon />}>
+        <LinkSidebar to="/" icon={<DashboardIcon />}>
           Dashboard
         </LinkSidebar>
         <LinkSidebar to="favourites" icon={<StarIcon />}>

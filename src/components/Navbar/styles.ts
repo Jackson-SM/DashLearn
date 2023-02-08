@@ -9,8 +9,4 @@ export const StyledNavbar = styled.nav`
   justify-content: space-between;
 
   grid-area: navbar;
-
-  & .logo {
-    margin: 0 auto;
-  }
 `;
