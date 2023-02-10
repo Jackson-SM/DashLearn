@@ -12,5 +12,6 @@ export const dark: DefaultTheme = {
 
     text: '#e7e7e7',
     textLight: '#BFBFBF',
+    textLight2: '#878686',
   },
 };

@@ -11,5 +11,6 @@ export const light: DefaultTheme = {
     backgroundLight2: '#dedede',
     text: '#0F0F0F',
     textLight: '#292929',
+    textLight2: '#3d3d3d',
   },
 };

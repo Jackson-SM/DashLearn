@@ -11,6 +11,7 @@ declare module 'styled-components' {
       backgroundLight2: string;
       text: string;
       textLight: string;
+      textLight2: string;
     };
   }
 }

@@ -49,7 +49,30 @@ export const StyledContentSidebar = styled.div`
   flex-direction: column;
   gap: 10px;
 `;
-export const StyledGroupSidebar = styled.div``;
+export const StyledGroupSidebar = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    font-size: 15px;
+    font-family: 'Albert Sans';
+    color: ${(props) => props.theme.colors.textLight2};
+    padding-left: 20px;
+
+    @media (max-width: ${styledConfig.medias.mobile}px) {
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px 0;
+  }
+`;
 export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
   text-decoration: none;
 

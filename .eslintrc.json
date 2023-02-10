@@ -26,6 +26,7 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
-      "import/export": "off"
+      "import/export": "off",
+      "no-undef": "off"
     }
 }

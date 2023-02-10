@@ -1,21 +1,24 @@
 import styled from 'styled-components';
+import styledConfig from '../../config/styled-components-config';
 
 export const StyledProfile = styled.div`
   color: ${({ theme }) => theme.colors.text};
 
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 `;
-export const StyledCircleProfile = styled.div`
-  width: 60px;
-  height: 60px;
-
-  padding: 8px;
+export const StyledCircleProfile = styled.div<{ status: 'online' | 'busy' | 'away' }>`
+  width: 50px;
+  height: 50px;
+  padding: 5px;
 
   z-index: 1;
 
   position: relative;
+
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 50%;
 
   &::before {
     content: '';
@@ -28,11 +31,13 @@ export const StyledCircleProfile = styled.div`
     right: -4px;
     top: 60%;
 
-    background: #ffb13d;
-
     border-radius: 50%;
 
-    border: 3px solid ${(props) => props.theme.colors.backgroundLight};
+    border: 4px solid ${(props) => props.theme.colors.backgroundLight};
+
+    ${(props) => props.status === 'online' && `background: #5dff57`}
+    ${(props) => props.status === 'busy' && `background: #ff251e`}
+    ${(props) => props.status === 'away' && `background: #ffb13d`}
   }
 
   & img {
@@ -40,9 +45,6 @@ export const StyledCircleProfile = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  border: 2px solid rgba(255, 255, 255, 0.26);
-  border-radius: 50%;
 `;
 export const StyledProfilePhoto = styled.div`
   height: 100%;
@@ -53,6 +55,10 @@ export const StyledProfilePhoto = styled.div`
 export const StyledContentProfile = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: ${styledConfig.medias.mobile}px) {
+    display: none;
+  }
 `;
 export const StyledNameProfile = styled.span`
   color: ${(props) => props.theme.colors.text};
