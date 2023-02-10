@@ -7,11 +7,11 @@ import {
   StyledProfilePhoto,
   StyledProfission,
 } from './styles';
-import photo from '../../assets/person.webp';
 
 export type InfoProfile = {
   name: string;
   profession: string;
+  photo: string;
   status: 'online' | 'busy' | 'away';
 };
 
@@ -28,7 +28,7 @@ export const Profile = ({ hideProfession, hideName, info }: ProfileProps) => {
     <StyledProfile>
       <StyledCircleProfile status={info.status}>
         <StyledProfilePhoto>
-          <img src={photo} alt="" />
+          <img src={info.photo} alt="" />
         </StyledProfilePhoto>
       </StyledCircleProfile>
       <StyledContentProfile>

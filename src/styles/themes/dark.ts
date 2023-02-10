@@ -8,7 +8,7 @@ export const dark: DefaultTheme = {
 
     background: '#0F0F0F',
     backgroundLight: '#1C1C1C',
-    backgroundLight2: '#262626',
+    backgroundLight2: '#444444',
 
     text: '#e7e7e7',
     textLight: '#BFBFBF',

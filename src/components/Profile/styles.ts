@@ -17,7 +17,7 @@ export const StyledCircleProfile = styled.div<{ status: 'online' | 'busy' | 'awa
 
   position: relative;
 
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid ${(props) => props.theme.colors.backgroundLight2};
   border-radius: 50%;
 
   &::before {
@@ -29,7 +29,7 @@ export const StyledCircleProfile = styled.div<{ status: 'online' | 'busy' | 'awa
     width: 10px;
 
     right: -4px;
-    top: 60%;
+    top: 0;
 
     border-radius: 50%;
 

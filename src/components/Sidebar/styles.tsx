@@ -14,7 +14,7 @@ export const StyledSidebar = styled.nav`
   padding: 5px;
   padding-top: 60px;
 
-  gap: 10px;
+  gap: 20px;
 
   display: flex;
   flex-direction: column;
@@ -85,37 +85,15 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
 
   width: 100%;
   padding: 14px;
-  font-size: 15px;
-  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 30px;
   gap: 40px;
 
   transition: background ease 130ms;
 
-  &::before {
-    content: '';
-
-    transition: all ease 400ms;
-
-    pointer-events: none;
-
-    position: absolute;
-
-    background: white;
-
-    opacity: 0;
-    width: 4px;
-    border-radius: 40px;
-    height: calc(100% - 10px);
-    top: 5px;
-    right: 5px;
-  }
-
-  & span {
-  }
-
   & svg {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     justify-self: start;
   }
 
@@ -150,7 +128,7 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
       position: absolute;
       background: ${({ theme }) => (theme.title === 'dark' ? theme.colors.backgroundLight2 : theme.colors.backgroundLight)};
       padding: 10px;
-      color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.primary : props.theme.colors.secundary)};
+      color: ${(props) => (props.theme.title === 'dark' ? props.theme.colors.text : props.theme.colors.secundary)};
 
       transition: all ease 230ms;
 
