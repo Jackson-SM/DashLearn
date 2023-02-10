@@ -47,7 +47,12 @@ export const StyledContentSidebar = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
+
+  @media (max-width: ${styledConfig.medias.mobile}px) {
+    align-items: center;
+  }
 `;
 export const StyledGroupSidebar = styled.div`
   display: flex;
@@ -70,7 +75,7 @@ export const StyledGroupSidebar = styled.div`
     flex-direction: column;
     gap: 10px;
 
-    padding: 10px 0;
+    padding: 20px 0;
   }
 `;
 export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
@@ -84,7 +89,7 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
   position: relative;
 
   width: 100%;
-  padding: 14px;
+  padding: 13px;
   font-size: 14px;
   border-radius: 30px;
   gap: 40px;
@@ -114,10 +119,14 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
 
   @media (max-width: ${styledConfig.medias.mobile}px) {
     position: relative;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-left: 10px;
+    align-items: center;
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 
     &:hover span {
       transform: translateX(0);
@@ -161,8 +170,8 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
       z-index: 1;
     }
     & svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
   }
 `;

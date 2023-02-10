@@ -9,31 +9,39 @@ import {
 } from './styles';
 
 export type InfoProfile = {
-  name: string;
-  profession: string;
   photo: string;
   status: 'online' | 'busy' | 'away';
 };
 
 type ProfileProps = {
-  info: InfoProfile;
   hideProfession?: boolean;
   hideName?: boolean;
+  name: string;
+  profession: string;
+  info: InfoProfile;
 };
 
-export const Profile = ({ hideProfession, hideName, info }: ProfileProps) => {
-  console.log(info.status);
+type CircleProfileProps = {
+  info: InfoProfile;
+};
 
+export const CircleProfile = ({ info }: CircleProfileProps) => {
+  return (
+    <StyledCircleProfile status={info.status}>
+      <StyledProfilePhoto>
+        <img src={info.photo} alt="" />
+      </StyledProfilePhoto>
+    </StyledCircleProfile>
+  );
+};
+
+export const Profile = ({ hideProfession, hideName, name, profession, info }: ProfileProps) => {
   return (
     <StyledProfile>
-      <StyledCircleProfile status={info.status}>
-        <StyledProfilePhoto>
-          <img src={info.photo} alt="" />
-        </StyledProfilePhoto>
-      </StyledCircleProfile>
+      <CircleProfile info={info} />
       <StyledContentProfile>
-        {!hideName && <StyledNameProfile>{info.name}</StyledNameProfile>}
-        {!hideProfession && <StyledProfission>{info.profession}</StyledProfission>}
+        {!hideName && <StyledNameProfile>{name}</StyledNameProfile>}
+        {!hideProfession && <StyledProfission>{profession}</StyledProfission>}
       </StyledContentProfile>
     </StyledProfile>
   );

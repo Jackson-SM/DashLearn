@@ -26,30 +26,38 @@ export const GroupSidebar = ({ children, title }: GroupSidebarProps) => {
 export const Sidebar = () => {
   const infosProfiles: InfoProfile[] = [
     {
-      name: 'Taylor Lewis',
-      profession: 'Web Development',
       photo: friend1,
       status: 'away',
     },
     {
-      name: 'Caroline Grace',
-      profession: 'Web Development',
       photo: friend2,
       status: 'busy',
     },
     {
-      name: 'John Smith',
-      profession: 'Web Development',
       photo: friend3,
       status: 'online',
     },
   ];
 
+  const friendsProfiles = [
+    {
+      name: 'Taylor Lewis',
+      profession: 'Web Development',
+    },
+    {
+      name: 'Caroline Grace',
+      profession: 'Designer UI/UX',
+    },
+    {
+      name: 'John Smith',
+      profession: 'Software Engineer',
+    },
+  ];
   return (
     <StyledSidebar>
       <StyledTopSidebar>
         <StyledProfileSidebar>
-          <Profile info={{ name: 'Jordan M.', profession: 'Designer UI/UX', status: 'busy', photo: person }} />
+          <Profile info={{ status: 'busy', photo: person }} name="Jordan M." profession="Design UI/UX" />
         </StyledProfileSidebar>
         <Search />
       </StyledTopSidebar>
@@ -72,13 +80,23 @@ export const Sidebar = () => {
         <LinkSidebar to="settings" icon={<GearIcon />}>
           Settings
         </LinkSidebar>
+
+        <GroupSidebar title="Friends">
+          {infosProfiles.map((info, index) => {
+            return (
+              <Profile
+                key={info.photo}
+                info={info}
+                hideProfession
+                name={friendsProfiles[index].name}
+                profession={friendsProfiles[index].profession}
+              />
+            );
+          })}
+        </GroupSidebar>
+
         <GroupSidebar title="Appearence">
           <Themes />
-        </GroupSidebar>
-        <GroupSidebar title="Friends">
-          {infosProfiles.map((info) => {
-            return <Profile key={info.name} info={info} hideProfession />;
-          })}
         </GroupSidebar>
       </StyledContentSidebar>
     </StyledSidebar>
