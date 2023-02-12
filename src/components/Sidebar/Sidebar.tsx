@@ -90,6 +90,7 @@ export const Sidebar = () => {
                 hideProfession
                 name={friendsProfiles[index].name}
                 profession={friendsProfiles[index].profession}
+                message
               />
             );
           })}

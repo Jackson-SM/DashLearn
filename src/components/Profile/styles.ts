@@ -1,12 +1,56 @@
 import styled from 'styled-components';
 import styledConfig from '../../config/styled-components-config';
 
+// Responsive and Icons options
+
+export const StyledOptions = styled.div`
+  justify-self: end;
+
+  padding: 5px;
+
+  & svg {
+    color: ${(props) => props.theme.colors.tertiary};
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: ${styledConfig.medias.mobile}px) {
+    position: absolute;
+
+    transition: all ease 200ms;
+
+    opacity: 0;
+
+    transform: translateX(30px);
+
+    background: ${(props) => props.theme.colors.backgroundLight};
+    padding: 10px;
+  }
+`;
+
+// Profile
+
 export const StyledProfile = styled.div`
   color: ${({ theme }) => theme.colors.text};
 
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  place-items: center;
   gap: 10px;
+
+  position: relative;
+
+  @media (max-width: ${styledConfig.medias.mobile}px) {
+    grid-template-columns: 1fr;
+
+    &:hover {
+      ${StyledOptions} {
+        transform: translateX(50px);
+
+        opacity: 1;
+      }
+    }
+  }
 `;
 export const StyledCircleProfile = styled.div<{ status: 'online' | 'busy' | 'away' }>`
   width: 50px;

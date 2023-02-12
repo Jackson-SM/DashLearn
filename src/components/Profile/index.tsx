@@ -1,7 +1,9 @@
+import { PaperPlaneIcon } from '@radix-ui/react-icons';
 import React from 'react';
 import {
   StyledCircleProfile,
   StyledContentProfile,
+  StyledOptions,
   StyledNameProfile,
   StyledProfile,
   StyledProfilePhoto,
@@ -19,6 +21,7 @@ type ProfileProps = {
   name: string;
   profession: string;
   info: InfoProfile;
+  message?: boolean;
 };
 
 type CircleProfileProps = {
@@ -35,7 +38,7 @@ export const CircleProfile = ({ info }: CircleProfileProps) => {
   );
 };
 
-export const Profile = ({ hideProfession, hideName, name, profession, info }: ProfileProps) => {
+export const Profile = ({ hideProfession, hideName, name, profession, info, message }: ProfileProps) => {
   return (
     <StyledProfile>
       <CircleProfile info={info} />
@@ -43,6 +46,11 @@ export const Profile = ({ hideProfession, hideName, name, profession, info }: Pr
         {!hideName && <StyledNameProfile>{name}</StyledNameProfile>}
         {!hideProfession && <StyledProfission>{profession}</StyledProfission>}
       </StyledContentProfile>
+      {message && (
+        <StyledOptions>
+          <PaperPlaneIcon />
+        </StyledOptions>
+      )}
     </StyledProfile>
   );
 };
