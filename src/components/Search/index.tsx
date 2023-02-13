@@ -1,8 +1,21 @@
-import React from 'react';
-import { StyledSearch } from './styles';
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
+import React, { useRef } from 'react';
+import { StyledSearch, StyledSearchButton, StyledSearchField } from './styles';
 
-type SearchProps = React.ComponentProps<typeof StyledSearch>;
+export const Search = () => {
+  const searchInput = useRef<HTMLInputElement>(null);
 
-export const Search = (props: SearchProps) => {
-  return <StyledSearch {...props} />;
+  const body = document.querySelector('body');
+  body?.addEventListener('click', () => {
+    searchInput?.current?.classList.remove('active_search');
+  });
+
+  return (
+    <StyledSearchField>
+      <StyledSearchButton onMouseEnter={() => searchInput.current?.classList.add('active_search')}>
+        <MagnifyingGlassIcon />
+      </StyledSearchButton>
+      <StyledSearch ref={searchInput} />
+    </StyledSearchField>
+  );
 };

@@ -59,8 +59,10 @@ export const Sidebar = () => {
         <StyledProfileSidebar>
           <Profile info={{ status: 'busy', photo: person }} name="Jordan M." profession="Design UI/UX" />
         </StyledProfileSidebar>
-        <Search />
       </StyledTopSidebar>
+
+      <Search />
+
       <StyledContentSidebar>
         <LinkSidebar to="/" icon={<HomeIcon />}>
           Dashboard
@@ -68,13 +70,13 @@ export const Sidebar = () => {
         <LinkSidebar to="tasks" icon={<BackpackIcon />}>
           Tasks
         </LinkSidebar>
-        <LinkSidebar to="tasks" icon={<BellIcon />}>
+        <LinkSidebar to="notifications" icon={<BellIcon />}>
           Notification
         </LinkSidebar>
-        <LinkSidebar to="tasks" icon={<ChatBubbleIcon />}>
+        <LinkSidebar to="messages" icon={<ChatBubbleIcon />}>
           Message
         </LinkSidebar>
-        <LinkSidebar to="tasks" icon={<EnvelopeClosedIcon />}>
+        <LinkSidebar to="inbox" icon={<EnvelopeClosedIcon />}>
           Inbox
         </LinkSidebar>
         <LinkSidebar to="settings" icon={<GearIcon />}>
