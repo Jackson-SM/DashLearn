@@ -1,9 +1,10 @@
-import { ChatBubbleIcon } from '@radix-ui/react-icons';
 import React from 'react';
-import { AmountCardInfo, AmountInfo, IconCard, StyledCardInfo, TitleCardInfo } from './styles';
+import { AmountCardInfo, IconCard, StyledCardInfo, TitleCardInfo } from './styles';
 
 type InfoCardProps = {
   title: string;
+  icon: JSX.Element;
+  amount: string;
 };
 
 type CardInfoProps = {
@@ -13,13 +14,9 @@ type CardInfoProps = {
 export const CardInfo = ({ info }: CardInfoProps) => {
   return (
     <StyledCardInfo>
-      <IconCard>
-        <ChatBubbleIcon />
-      </IconCard>
-      <AmountInfo>
-        <TitleCardInfo>{info.title}</TitleCardInfo>
-        <AmountCardInfo>4</AmountCardInfo>
-      </AmountInfo>
+      <IconCard>{info.icon}</IconCard>
+      <TitleCardInfo>{info.title}</TitleCardInfo>
+      <AmountCardInfo>{info.amount}</AmountCardInfo>
     </StyledCardInfo>
   );
 };
