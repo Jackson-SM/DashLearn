@@ -13,11 +13,12 @@ import {
   ArcElement,
   RadialLinearScale,
   BarElement,
+  LineController,
+  BarController,
 } from 'chart.js';
-import { Chart, Doughnut, Pie, PolarArea } from 'react-chartjs-2';
-import { DoughnutOptions, LineOptions } from './chartOptions';
+import { Chart } from 'react-chartjs-2';
+import { LineOptions } from './chartOptions';
 import { transparentize } from 'polished';
-import { dark } from '../../../styles/themes/dark';
 import { StyledGraphics, StyledOneGraphic, AmountGraphic } from './styles';
 import { useTheme } from '../../../hooks/useTheme';
 
@@ -36,6 +37,8 @@ export const CardsChart = () => {
     ArcElement,
     RadialLinearScale,
     BarElement,
+    LineController,
+    BarController,
   );
 
   const labelCreate = [
