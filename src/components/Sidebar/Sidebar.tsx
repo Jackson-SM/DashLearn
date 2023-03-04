@@ -97,10 +97,6 @@ export const Sidebar = () => {
             );
           })}
         </GroupSidebar>
-
-        <GroupSidebar title="Appearence">
-          <Themes />
-        </GroupSidebar>
       </StyledContentSidebar>
     </StyledSidebar>
   );

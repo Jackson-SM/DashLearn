@@ -8,10 +8,6 @@ export const StyledGraphics = styled.div`
 
 export const StyledOneGraphic = styled.div`
   background: ${(props) => props.theme.colors.backgroundLight};
-  padding: 10px;
-
-  gap: 20px;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -20,6 +16,8 @@ export const StyledOneGraphic = styled.div`
   border-radius: 5px;
 `;
 
-export const TitleGraphic = styled.span`
-  font-size: 18px;
+export const AmountGraphic = styled.span`
+  font-size: 30px;
+  font-family: 'Montserrat';
+  font-weight: bold;
 `;
