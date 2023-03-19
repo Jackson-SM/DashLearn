@@ -2,7 +2,6 @@ import React from 'react';
 import { StyledContentSidebar, StyledGroupSidebar, StyledProfileSidebar, StyledSidebar, StyledTopSidebar } from './styles';
 import { BackpackIcon, BellIcon, ChatBubbleIcon, EnvelopeClosedIcon, GearIcon, HomeIcon } from '@radix-ui/react-icons';
 import { LinkSidebar } from './LinkSidebar';
-import { Themes } from '../Themes/Themes';
 import { InfoProfile, Profile } from '../Profile';
 import { Search } from '../Search';
 import person from '../../assets/person.png';
