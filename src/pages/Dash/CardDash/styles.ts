@@ -4,7 +4,7 @@ import { CardDashProps } from '.';
 export const StyledCardDash = styled.div`
   background: ${(props) => props.theme.colors.backgroundLight};
 
-  width: 400px;
+  width: 100%;
   height: 180px;
   margin: 0 auto;
 

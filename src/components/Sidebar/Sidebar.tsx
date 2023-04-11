@@ -56,7 +56,7 @@ export const Sidebar = () => {
     <StyledSidebar>
       <StyledTopSidebar>
         <StyledProfileSidebar>
-          <Profile info={{ status: 'busy', photo: person }} name="Jordan M." profession="Design UI/UX" />
+          <Profile info={{ status: 'online', photo: person }} name="Jordan M." profession="Design UI/UX" />
         </StyledProfileSidebar>
       </StyledTopSidebar>
 

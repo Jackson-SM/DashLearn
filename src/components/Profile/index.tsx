@@ -1,5 +1,5 @@
-import { PaperPlaneIcon } from '@radix-ui/react-icons';
 import React from 'react';
+import { PaperPlaneIcon } from '@radix-ui/react-icons';
 import {
   StyledCircleProfile,
   StyledContentProfile,
