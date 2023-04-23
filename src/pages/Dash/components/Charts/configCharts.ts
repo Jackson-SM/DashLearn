@@ -13,6 +13,9 @@ export function getConfigCharts(theme: DefaultTheme): OptionsChartProps {
         id: 'basic-bar',
         background: theme.colors.backgroundLight,
       },
+      dataLabels: {
+        enabled: false,
+      },
       colors: [theme.colors.primary, theme.colors.secundary, theme.colors.tertiary],
       xaxis: {
         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
@@ -45,13 +48,25 @@ export function getConfigCharts(theme: DefaultTheme): OptionsChartProps {
         width: 3,
       },
       tooltip: {
-        enabled: false,
+        enabled: true,
+        onDatasetHover: {
+          highlightDataSeries: false,
+        },
+        x: {
+          show: false,
+        },
+        marker: {
+          fillColors: [theme.colors.secundaryLight],
+        },
+      },
+      theme: {
+        mode: 'dark',
       },
     },
     series: [
       {
-        name: 'series-1',
-        data: [30, 40, 45, 50, 49, 60, 70, 91],
+        name: 'Friends',
+        data: [0, 4, 6, 10, 9, 1, 8, 7],
       },
     ],
   };
