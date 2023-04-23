@@ -12,8 +12,7 @@ export const StyledLogo = styled.h1<LogoProps>`
   justify-content: center;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
   }
 
   ${(props) =>
@@ -39,14 +38,8 @@ export const StyledLogo = styled.h1<LogoProps>`
   }
 
   @media (max-width: ${styledConfig.medias.mobile}px) {
-    border-radius: 50%;
-
-    border: 2px solid ${(props) => props.theme.colors.textLight};
-    width: 50px;
-    height: 50px;
-    -webkit-background-clip: content-box;
-    -webkit-text-fill-color: initial;
-    background: none;
-    color: ${({ theme }) => theme.colors.textLight};
+    img {
+      width: 70px;
+    }
   }
 `;
