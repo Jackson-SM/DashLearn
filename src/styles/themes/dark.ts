@@ -3,12 +3,12 @@ import { DefaultTheme } from 'styled-components';
 export const dark: DefaultTheme = {
   title: 'dark',
   colors: {
-    primary: '#0066FF',
-    primaryLight: '#32c7fc',
+    primary: '#FF8000',
+    primaryLight: '#ffb700',
     secundary: '#ab62ff',
     secundaryLight: '#e18efa',
-    tertiary: '#FF8000',
-    tertiaryLight: '#ffb700',
+    tertiary: '#0066FF',
+    tertiaryLight: '#32c7fc',
 
     background: '#0F0F0F',
     backgroundLight: '#1C1C1C',

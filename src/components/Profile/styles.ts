@@ -30,7 +30,7 @@ export const StyledOptions = styled.div`
 
 // Profile
 
-export const StyledProfile = styled.div`
+export const StyledProfile = styled.button`
   color: ${({ theme }) => theme.colors.text};
 
   display: grid;
@@ -38,18 +38,22 @@ export const StyledProfile = styled.div`
   place-items: center;
   gap: 10px;
 
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: background ease 130ms;
+
+  &:hover {
+    background: ${(props) => props.theme.colors.backgroundLight2};
+  }
+
   position: relative;
 
   @media (max-width: ${styledConfig.medias.mobile}px) {
     grid-template-columns: 1fr;
-
-    &:hover {
-      ${StyledOptions} {
-        transform: translateX(50px);
-
-        opacity: 1;
-      }
-    }
   }
 `;
 export const StyledCircleProfile = styled.div<{ status: 'online' | 'busy' | 'away' }>`

@@ -11,6 +11,11 @@ export const StyledLogo = styled.h1<LogoProps>`
   align-items: center;
   justify-content: center;
 
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
   ${(props) =>
     props.simpleColor
       ? `color: ${props.theme.colors.textLight};`
