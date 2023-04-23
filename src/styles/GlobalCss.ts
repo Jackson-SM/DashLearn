@@ -7,8 +7,11 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body {
+    font-family: 'Poppins';
+  }
+
   body {
-    font-family: 'Nunito';
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
   }

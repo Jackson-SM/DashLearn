@@ -1,8 +1,9 @@
 import React from 'react';
-import { CardDash } from './CardDash';
+import { CardDash } from './components/CardDash';
 import { CardsInfo, DashboardContainer, MainDash } from './styles';
 import { BsListTask, BsFillCollectionFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
+import { Charts } from './components/Charts';
 
 export const Dash = () => {
   return (
@@ -13,6 +14,7 @@ export const Dash = () => {
           <CardDash title="Friends" amount={12} color="secondary" icon={<FaUserFriends />} />
           <CardDash title="Collections" amount={5} color="tertiary" icon={<BsFillCollectionFill />} />
         </CardsInfo>
+        <Charts />
       </MainDash>
     </DashboardContainer>
   );

@@ -8,6 +8,9 @@ export const DashboardContainer = styled.div`
 
 export const MainDash = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 export const CardsInfo = styled.div`
