@@ -22,7 +22,7 @@ export const CardDash = ({ color, title, amount, icon, ...props }: CardDashProps
     <StyledCardDash {...props}>
       <TopInfoCard>
         <IconCardDash color={color}>{icon}</IconCardDash>
-        <h1>Ola</h1>
+        <h1>23</h1>
         <InfoCardDash>
           <TitleCardDash>{title}</TitleCardDash>
           <AmountCardDash>+{amount}</AmountCardDash>

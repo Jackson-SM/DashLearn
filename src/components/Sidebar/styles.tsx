@@ -78,7 +78,7 @@ export const StyledGroupSidebar = styled.div`
     padding: 20px 0;
   }
 `;
-export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
+export const StyledLinkSidebar = styled(Link)<{ active?: boolean }>`
   text-decoration: none;
 
   color: ${(props) => props.theme.colors.textLight};
@@ -91,7 +91,7 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
   width: 100%;
   padding: 13px;
   font-size: 14px;
-  border-radius: 30px;
+  border-radius: 3px;
   gap: 40px;
 
   transition: background ease 130ms;
@@ -103,14 +103,14 @@ export const StyledLinkSidebar = styled(Link) <{ active?: boolean }>`
   }
 
   &:hover {
-    background: ${(props) => props.theme.colors.primary};
+    background: linear-gradient(to right, transparent 5%, ${(props) => props.theme.colors.primary});
     color: white;
   }
 
   ${(props) =>
     props.active &&
     `color: white;
-  background: ${props.theme.colors.primary};
+    background: linear-gradient(to right, transparent 5%, ${props.theme.colors.primary});
 
    &::before {
     opacity: 1;

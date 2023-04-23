@@ -7,8 +7,8 @@ type WidthSizeProps = {
 
 export const useWidthSize = () => {
   const [windowSize, setWindowSize] = useState<WidthSizeProps>({
-    width: 1920,
-    height: 1080,
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
 
   function handleResize() {
