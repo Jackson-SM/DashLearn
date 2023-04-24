@@ -1,12 +1,12 @@
 import { ApexOptions } from 'apexcharts';
 import { DefaultTheme } from 'styled-components';
 
-type OptionsChartProps = {
+export type OptionsChartProps = {
   options: ApexOptions;
   series: ApexAxisChartSeries | ApexNonAxisChartSeries | undefined;
 };
 
-export function getConfigCharts(theme: DefaultTheme): OptionsChartProps {
+export function getConfigCharts(theme: DefaultTheme, options?: OptionsChartProps['series']): OptionsChartProps {
   const optionsChart: OptionsChartProps = {
     options: {
       chart: {
@@ -66,9 +66,10 @@ export function getConfigCharts(theme: DefaultTheme): OptionsChartProps {
     series: [
       {
         name: 'Friends',
-        data: [0, 4, 6, 10, 9, 1, 8, 7],
+        data: [0, 4, 6, 10, 9, 1, 8, 4],
       },
     ],
+    ...options,
   };
 
   return optionsChart;
