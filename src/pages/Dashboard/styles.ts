@@ -12,4 +12,6 @@ export const ContainerDashboard = styled.div`
 
 export const StyledMain = styled.main`
   grid-area: main;
+  height: calc(100vh - 80px);
+  overflow: scroll;
 `;

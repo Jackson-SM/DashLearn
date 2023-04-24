@@ -9,25 +9,40 @@ export const Charts = () => {
   const serieTasks: OptionsChartProps['series'] = [
     {
       name: 'Tasks',
-      data: [1, 2, 3, 4, 5, 6, 7],
+      data: [1, 2, 3, 4, 5, 3, 4],
     },
   ];
   const serieFriends: OptionsChartProps['series'] = [
     {
       name: 'Friends',
-      data: [1, 2, 3, 4, 5, 6, 7],
+      data: [1, 2, 3, 4, 5, 4, 6],
     },
   ];
   const serieCollections: OptionsChartProps['series'] = [
     {
       name: 'Collections',
-      data: [1, 2, 3, 4, 5, 6, 7],
+      data: [3, 6, 10, 5, 3, 1, 6],
     },
   ];
 
-  const tasksPropsCharts = getConfigCharts(theme, serieTasks);
-  const friendsPropsCharts = getConfigCharts(theme, serieFriends);
-  const collectionsPropsCharts = getConfigCharts(theme, serieCollections);
+  const tasksPropsCharts = getConfigCharts(theme, 'tasks', serieTasks);
+  const friendsPropsCharts = getConfigCharts(
+    {
+      ...theme,
+      colors: {
+        ...theme.colors,
+        primary: theme.colors.secundary,
+        primaryLight: theme.colors.secundaryLight,
+      },
+    },
+    'friends',
+    serieFriends,
+  );
+  const collectionsPropsCharts = getConfigCharts(
+    { ...theme, colors: { ...theme.colors, primary: theme.colors.tertiary, primaryLight: theme.colors.tertiaryLight } },
+    'collections',
+    serieCollections,
+  );
 
   return (
     <SCharts.StyledCharts>

@@ -6,7 +6,7 @@ export type OptionsChartProps = {
   series: ApexAxisChartSeries | ApexNonAxisChartSeries | undefined;
 };
 
-export function getConfigCharts(theme: DefaultTheme, options?: OptionsChartProps['series']): OptionsChartProps {
+export function getConfigCharts(theme: DefaultTheme, id: string, options?: OptionsChartProps['series']): OptionsChartProps {
   const optionsChart: OptionsChartProps = {
     options: {
       chart: {
@@ -18,7 +18,6 @@ export function getConfigCharts(theme: DefaultTheme, options?: OptionsChartProps
       },
       colors: [theme.colors.primary, theme.colors.secundary, theme.colors.tertiary],
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
         labels: {
           show: false,
         },
@@ -63,13 +62,7 @@ export function getConfigCharts(theme: DefaultTheme, options?: OptionsChartProps
         mode: 'dark',
       },
     },
-    series: [
-      {
-        name: 'Friends',
-        data: [0, 4, 6, 10, 9, 1, 8, 4],
-      },
-    ],
-    ...options,
+    series: options,
   };
 
   return optionsChart;
