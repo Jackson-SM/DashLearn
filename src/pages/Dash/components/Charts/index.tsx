@@ -46,9 +46,9 @@ export const Charts = () => {
 
   return (
     <SCharts.StyledCharts>
-      <ApexCharts options={tasksPropsCharts.options} series={tasksPropsCharts.series} type="area" height="400" />
-      <ApexCharts options={friendsPropsCharts.options} series={friendsPropsCharts.series} type="bar" height="400" />
-      <ApexCharts options={collectionsPropsCharts.options} series={collectionsPropsCharts.series} type="bar" height="400" />
+      <ApexCharts options={tasksPropsCharts.options} series={tasksPropsCharts.series} type="area" />
+      <ApexCharts options={friendsPropsCharts.options} series={friendsPropsCharts.series} type="line" />
+      <ApexCharts options={collectionsPropsCharts.options} series={collectionsPropsCharts.series} type="bar" />
     </SCharts.StyledCharts>
   );
 };

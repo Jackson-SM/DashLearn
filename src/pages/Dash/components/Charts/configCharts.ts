@@ -10,7 +10,7 @@ export function getConfigCharts(theme: DefaultTheme, id: string, options?: Optio
   const optionsChart: OptionsChartProps = {
     options: {
       chart: {
-        id: 'basic-bar',
+        id,
         background: theme.colors.backgroundLight,
       },
       dataLabels: {
