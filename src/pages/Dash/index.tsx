@@ -4,6 +4,7 @@ import { CardsInfo, DashboardContainer, MainDash } from './styles';
 import { BsListTask, BsFillCollectionFill } from 'react-icons/bs';
 import { FaUserFriends } from 'react-icons/fa';
 import { Charts } from './components/Charts';
+import { Activity } from './components/Activity';
 
 export const Dash = () => {
   return (
@@ -15,6 +16,7 @@ export const Dash = () => {
           <CardDash title="Collections" amount={5} color="tertiary" icon={<BsFillCollectionFill />} />
         </CardsInfo>
         <Charts />
+        <Activity />
       </MainDash>
     </DashboardContainer>
   );
