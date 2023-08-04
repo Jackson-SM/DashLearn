@@ -2,20 +2,19 @@
  > O Projeto que visa desenvolver um dashboard para gerenciamento de tarefas e anotações. Com ele, é possível criar tarefas, definir prazos e responsáveis, bem como acompanhar o andamento e progresso de cada uma delas. Além disso, o Dashlearn também oferece a possibilidade de criar anotações para manter todas as informações relevantes em um só lugar. Acreditamos que o nosso projeto pode ser uma grande ajuda para aumentar a produtividade e melhorar a gestão de tarefas e projetos.
 
 
-### Detalhes Técnicos:
+### Como iniciar o projeto:
+- Clonar o projeto:
+```bash
+git clone git@github.com:Jackson-SM/DashLearn.git
+```
  - Instalar Dependências:
- ```
- yarn
- ```
- ```
- npm i
+ ```bash
+cd DashLearn
+yarn
  ```
  - Iniciar Projeto em Localhost:
- ```
- yarn dev
- ```
- ```
- npm run dev
+ ```bash
+yarn dev
  ```
 
  - Configurações de dependências
