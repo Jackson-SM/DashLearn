@@ -12,7 +12,9 @@ export const StyledListActivityItem = styled.td`
   padding: 5px;
   font-size: 14px;
 
-  transition: transform ease 200ms, background ease 130ms;
+  transition:
+    transform ease 200ms,
+    background ease 130ms;
 
   &:hover {
     transform: scale(1.04);

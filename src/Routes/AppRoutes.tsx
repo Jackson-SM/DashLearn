@@ -8,6 +8,7 @@ import { Tasks } from '../pages/Tasks';
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/dashboard" element={<h1>Hello World</h1>} />
       <Route path="/" element={<Dashboard />}>
         <Route path="/" element={<Dash />} />
         <Route path="tasks" element={<Tasks />} />
